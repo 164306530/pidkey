@@ -75,7 +75,8 @@
         static extern int PidGenX(string ProductKey, string PkeyPath, string MSPID, int UnknownUsage, IntPtr ProductID, IntPtr DPID3, IntPtr DPID4);
         
         
-                    IntPtr PID = Marshal.AllocHGlobal(0x32);
+             
+            IntPtr PID = Marshal.AllocHGlobal(0x32);
             IntPtr DPID3 = Marshal.AllocHGlobal(0xA4);
             IntPtr DPID4 = Marshal.AllocHGlobal(0x04F8);
             RetID = PidGenX(ProductKey, PKeyPath, MSPID, 0, PID, DPID3, DPID4);
