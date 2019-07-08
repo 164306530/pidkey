@@ -27,17 +27,17 @@
                     ProductKeyType = node1.ChildNodes[4].InnerText;
                 }
 
-                XmlNode node = doc.SelectSingleNode("/pkc:ProductKeyConfiguration/pkc:KeyRanges/pkc:KeyRange[pkc:RefActConfigId='" + ActConfigId + "']", ns);
-                if (node != null)
+                XmlNode node2 = doc.SelectSingleNode("/pkc:ProductKeyConfiguration/pkc:KeyRanges/pkc:KeyRange[pkc:RefActConfigId='" + ActConfigId + "']", ns);
+                if (node2 != null)
                 {
-                    PartNumber = node.ChildNodes[1].InnerText;
-                    EulaType = node.ChildNodes[2].InnerText;
+                    PartNumber = node2.ChildNodes[1].InnerText;
+                    EulaType = node2.ChildNodes[2].InnerText;
                 }
-                XmlNode node = doc.SelectSingleNode("/pkc:ProductKeyConfiguration/pkc:PublicKeys/pkc:PublicKey[pkc:GroupId='" + groupid + "']", ns);
-                if (node != null)
+                XmlNode node3 = doc.SelectSingleNode("/pkc:ProductKeyConfiguration/pkc:PublicKeys/pkc:PublicKey[pkc:GroupId='" + groupid + "']", ns);
+                if (node3 != null)
                 {
-                    AlgorithmId = node.ChildNodes[1].InnerText;
-                    PublicKeyValue = node.ChildNodes[2].InnerText;
+                    AlgorithmId = node3.ChildNodes[1].InnerText;
+                    PublicKeyValue = node3.ChildNodes[2].InnerText;
                 }
 
             }
